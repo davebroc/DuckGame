@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://d3jr2gj01lkjg"]
+
+[ext_resource type="PackedScene" uid="uid://xbn0uglicg2h" path="res://Player/Player.tscn" id="1_fdrln"]
+[ext_resource type="Texture2D" uid="uid://b583k1a3tc465" path="res://Background.png" id="2_h2pf7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2qn32"]
+
+[node name="World" type="Node2D"]
+position = Vector2(0, -2)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(565, 599)
+scale = Vector2(69.3557, 6.07572)
+shape = SubResource("RectangleShape2D_2qn32")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1162, 383)
+rotation = -1.5708
+scale = Vector2(69.3557, 6.07572)
+shape = SubResource("RectangleShape2D_2qn32")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-35.9998, 485)
+rotation = -1.5708
+scale = Vector2(69.3557, 6.07572)
+shape = SubResource("RectangleShape2D_2qn32")
+
+[node name="Player" parent="." instance=ExtResource("1_fdrln")]
+position = Vector2(89, 158)
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(495, 324)
+scale = Vector2(33.4495, 27.8805)
+texture = ExtResource("2_h2pf7")
