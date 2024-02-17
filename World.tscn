@@ -1,21 +1,29 @@
-[gd_scene load_steps=4 format=3 uid="uid://d3jr2gj01lkjg"]
+[gd_scene load_steps=5 format=3 uid="uid://d3jr2gj01lkjg"]
 
 [ext_resource type="PackedScene" uid="uid://xbn0uglicg2h" path="res://Player/Player.tscn" id="1_fdrln"]
-[ext_resource type="PackedScene" uid="uid://b2e7t3gi1k54n" path="res://map.tscn" id="2_nit4g"]
+[ext_resource type="PackedScene" uid="uid://bfgn7ju7t67ge" path="res://map_blank.tscn" id="3_kyqgi"]
 [ext_resource type="Texture2D" uid="uid://i67qdvo15dxc" path="res://night_sky.png" id="3_l7nqc"]
+[ext_resource type="PackedScene" uid="uid://cvedtvu02lwwj" path="res://Player/Player2.tscn" id="4_yx33w"]
 
 [node name="World" type="Node2D"]
 position = Vector2(0, -2)
+scale = Vector2(1, 1.00192)
 
 [node name="Player" parent="." instance=ExtResource("1_fdrln")]
 position = Vector2(89, 158)
 
-[node name="TileMap" parent="." instance=ExtResource("2_nit4g")]
-z_index = -4
-position = Vector2(-89, 537)
-scale = Vector2(1.4817, 1.48)
-
 [node name="NightSky" type="Sprite2D" parent="."]
 z_index = -10
-position = Vector2(493, 119)
+position = Vector2(248, -150.711)
+scale = Vector2(-1.10103, -1.15067)
 texture = ExtResource("3_l7nqc")
+
+[node name="TileMap" parent="." instance=ExtResource("3_kyqgi")]
+position = Vector2(-82, 265)
+
+[node name="Player2" parent="." instance=ExtResource("4_yx33w")]
+position = Vector2(-206.82, 150.811)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(281, 20.9598)
+scale = Vector2(-2.933, 1)
