@@ -1,9 +1,10 @@
-[gd_scene load_steps=24 format=3 uid="uid://xbn0uglicg2h"]
+[gd_scene load_steps=25 format=3 uid="uid://xbn0uglicg2h"]
 
 [ext_resource type="Script" path="res://Player/Player.gd" id="1_xvr52"]
 [ext_resource type="Texture2D" uid="uid://ixhw8hxof8pj" path="res://Player/Jump.png" id="2_nsv5r"]
 [ext_resource type="Texture2D" uid="uid://dr4waac8oqnqy" path="res://Player/Idle.png" id="2_y7mlj"]
 [ext_resource type="Texture2D" uid="uid://bjjji1xtjfi1m" path="res://Player/Walk.png" id="3_rkife"]
+[ext_resource type="PackedScene" uid="uid://es6ehd0uc5a4" path="res://Player/Actions/Fire.tscn" id="5_r5via"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a2chn"]
 radius = 9.55724
@@ -250,3 +251,7 @@ libraries = {
 "": SubResource("AnimationLibrary_f2h1j")
 }
 autoplay = "Idle"
+
+[node name="Node2D" parent="." instance=ExtResource("5_r5via")]
+z_index = -2
+position = Vector2(51, 26)
