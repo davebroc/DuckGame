@@ -10,18 +10,12 @@
 position = Vector2(0, -2)
 scale = Vector2(1, 1.00192)
 
-[node name="NightSky" type="Sprite2D" parent="."]
-z_index = -10
-position = Vector2(248, -150.711)
-scale = Vector2(-1.10103, -1.15067)
-texture = ExtResource("3_l7nqc")
-
 [node name="TileMap" parent="." instance=ExtResource("3_kyqgi")]
 position = Vector2(-82, 265)
 
 [node name="Camera2D2" type="Camera2D" parent="."]
 position = Vector2(-18, 203.609)
-scale = Vector2(1.00018, 1)
+scale = Vector2(1.13128, 0.830077)
 zoom = Vector2(3, 3)
 position_smoothing_enabled = true
 position_smoothing_speed = 40.0
@@ -34,3 +28,16 @@ scale = Vector2(0.998993, 1)
 [node name="Player" parent="." instance=ExtResource("1_fdrln")]
 position = Vector2(-14.004, 166.68)
 scale = Vector2(0.998993, 1)
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scroll_ignore_camera_zoom = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(2048, 1024)
+
+[node name="NightSky" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+z_index = -10
+position = Vector2(1267, 727)
+rotation = -3.14159
+texture = ExtResource("3_l7nqc")
+centered = false

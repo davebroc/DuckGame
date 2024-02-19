@@ -30,7 +30,8 @@ func _physics_process(delta):
 
 	var direction = Input.get_axis(actionName("left"), actionName("right"))
 	if direction != 0:
-		get_node("AnimatedSprite2D").flip_h = direction < 0
+		scale.x = scale.y * sign(direction)
+		# get_node("AnimatedSprite2D").flip_h = direction < 0
 	if direction:
 		velocity.x = direction * SPEED
 		if velocity.y == 0:
