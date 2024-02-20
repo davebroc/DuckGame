@@ -21,11 +21,11 @@ scale = Vector2(1, 1.00192)
 position = Vector2(-101, 50.412)
 
 [node name="Player2" parent="." instance=ExtResource("4_yx33w")]
-position = Vector2(-212, -10.9789)
+position = Vector2(-212, -10)
 scale = Vector2(0.998993, 1)
 
 [node name="Player" parent="." instance=ExtResource("1_fdrln")]
-position = Vector2(-54, -9.98084)
+position = Vector2(-54, -10)
 scale = Vector2(0.998993, 1)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]

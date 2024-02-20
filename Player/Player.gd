@@ -42,7 +42,7 @@ func _physics_process(delta):
 		if velocity.y == 0:
 			anim.play("Idle")
 
-	var current_score = (int) (-1* position.y)
+	var current_score = (int) (-1* position.y) -10
 	if current_score > Global.scores[player_index]:
 		Global.scores[player_index] = current_score
 
