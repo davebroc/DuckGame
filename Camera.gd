@@ -2,6 +2,7 @@ extends Camera2D
 
 @onready var player1 =  get_node("../Player")
 @onready var player2 =  get_node("../Player2")
+@onready var view =  get_node("../View")
 
 func _ready():
 	pass
