@@ -18,14 +18,14 @@ position = Vector2(0, -2)
 scale = Vector2(1, 1.00192)
 
 [node name="TileMap" parent="." instance=ExtResource("6_2xoej")]
-position = Vector2(-4214, 78.3745)
+position = Vector2(-4214, 82.8409)
 
 [node name="Player2" parent="." instance=ExtResource("4_yx33w")]
-position = Vector2(-212, -10)
+position = Vector2(46, -10)
 scale = Vector2(0.998993, 1)
 
 [node name="Player" parent="." instance=ExtResource("1_fdrln")]
-position = Vector2(-54, -10)
+position = Vector2(-276, -10)
 scale = Vector2(0.998993, 1)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
@@ -42,7 +42,7 @@ texture = ExtResource("3_l7nqc")
 centered = false
 
 [node name="Camera2D2" type="Camera2D" parent="."]
-position = Vector2(-69, -23.9541)
+position = Vector2(-117, -23.9541)
 scale = Vector2(1.13128, 0.830077)
 zoom = Vector2(3, 3)
 position_smoothing_enabled = true
@@ -59,9 +59,9 @@ label_settings = SubResource("LabelSettings_tp1nd")
 script = ExtResource("6_rq2lm")
 
 [node name="Score2" type="Label" parent="."]
-offset_left = 35.0
+offset_left = 31.0
 offset_top = 16.9674
-offset_right = 75.0
+offset_right = 71.0
 offset_bottom = 85.9674
 text = "0"
 label_settings = SubResource("LabelSettings_vqd7y")

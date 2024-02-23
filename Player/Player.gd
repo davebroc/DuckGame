@@ -53,6 +53,11 @@ func _physics_process(delta):
 	jump()
 	move()
 	score()
+
+	if position.y > 1000:
+		position.x = Global.playerStart[player_index][0]
+		position.y = Global.playerStart[player_index][1]
+		Global.scores[player_index] = 0
 	
 	if Input.is_joy_button_pressed(player_index, JOY_BUTTON_START):
 		get_tree().change_scene_to_file("res://Options.tscn")
