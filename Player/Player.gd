@@ -17,11 +17,7 @@ func _ready():
 func actionName(action):
 	return action + str(player_index)
 
-func _physics_process(delta):
-	# Add the gravity.
-	if not is_on_floor():
-		velocity.y += gravity * delta
-
+func jump():
 	if Input.is_joy_button_pressed(player_index, JOY_BUTTON_A):
 		anim.play("Jump") # make a fall animation?
 		if velocity.y >= 0:
@@ -29,6 +25,7 @@ func _physics_process(delta):
 		if is_on_floor():
 			velocity.y -= JUMP_VELOCITY
 
+func move():
 	var direction = Input.get_axis(actionName("left"), actionName("right"))
 	if direction != 0:
 		scale.x = scale.y * sign(direction)
@@ -42,8 +39,22 @@ func _physics_process(delta):
 		if velocity.y == 0:
 			anim.play("Idle")
 
+func score():
 	var current_score = (int) (-1* position.y) -10
 	if current_score > Global.scores[player_index]:
 		Global.scores[player_index] = current_score
+
+
+func _physics_process(delta):
+	# Add the gravity.
+	if not is_on_floor():
+		velocity.y += gravity * delta
+
+	jump()
+	move()
+	score()
+	
+	if Input.is_joy_button_pressed(player_index, JOY_BUTTON_START):
+		get_tree().change_scene_to_file("res://Options.tscn")
 
 	move_and_slide()

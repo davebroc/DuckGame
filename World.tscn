@@ -1,10 +1,10 @@
 [gd_scene load_steps=9 format=3 uid="uid://d3jr2gj01lkjg"]
 
 [ext_resource type="PackedScene" uid="uid://xbn0uglicg2h" path="res://Player/Player.tscn" id="1_fdrln"]
-[ext_resource type="PackedScene" uid="uid://bfgn7ju7t67ge" path="res://map_blank.tscn" id="3_kyqgi"]
 [ext_resource type="Texture2D" uid="uid://i67qdvo15dxc" path="res://night_sky.png" id="3_l7nqc"]
 [ext_resource type="PackedScene" uid="uid://cvedtvu02lwwj" path="res://Player/Player2.tscn" id="4_yx33w"]
 [ext_resource type="Script" path="res://Camera.gd" id="5_n5ray"]
+[ext_resource type="PackedScene" uid="uid://b2e7t3gi1k54n" path="res://map.tscn" id="6_2xoej"]
 [ext_resource type="Script" path="res://Score.gd" id="6_rq2lm"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_tp1nd"]
@@ -17,8 +17,8 @@ font_size = 50
 position = Vector2(0, -2)
 scale = Vector2(1, 1.00192)
 
-[node name="TileMap" parent="." instance=ExtResource("3_kyqgi")]
-position = Vector2(-101, 50.412)
+[node name="TileMap" parent="." instance=ExtResource("6_2xoej")]
+position = Vector2(-4214, 78.3745)
 
 [node name="Player2" parent="." instance=ExtResource("4_yx33w")]
 position = Vector2(-212, -10)
@@ -50,18 +50,18 @@ position_smoothing_speed = 40.0
 script = ExtResource("5_n5ray")
 
 [node name="Score" type="Label" parent="."]
-offset_left = -209.0
+offset_left = -293.0
 offset_top = 16.9674
-offset_right = -169.0
+offset_right = -253.0
 offset_bottom = 85.9674
 text = "0"
 label_settings = SubResource("LabelSettings_tp1nd")
 script = ExtResource("6_rq2lm")
 
 [node name="Score2" type="Label" parent="."]
-offset_left = 46.0
+offset_left = 35.0
 offset_top = 16.9674
-offset_right = 86.0
+offset_right = 75.0
 offset_bottom = 85.9674
 text = "0"
 label_settings = SubResource("LabelSettings_vqd7y")
